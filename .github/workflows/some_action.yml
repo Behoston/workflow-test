@@ -2,7 +2,7 @@ name: some action
 on:
   workflow_dispatch:
 jobs:
-  starter:
+  some_action:
     runs-on: ubuntu-latest
     steps:
       - name: Map branch to DEMO environment

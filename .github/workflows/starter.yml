@@ -3,7 +3,7 @@ on:
   schedule:
     - cron: '* * * * *'
 jobs:
-  run_reindex_on_demo:
+  starter:
     strategy:
       matrix:
         ref: [ a, b ]
