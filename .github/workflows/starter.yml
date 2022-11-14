@@ -1,8 +1,8 @@
 name: starter
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '*/5 * * * *'
+#  schedule:
+#    - cron: '*/5 * * * *'
 jobs:
   starter:
     strategy:
@@ -11,7 +11,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Invoke reindex on demo ${{matrix.ref}}"
-        uses: benc-uk/workflow-dispatch@v1
-        with:
-          workflow: some action
-          ref: ${{matrix.ref}}
+        uses: ./.github/workflows/some_action.yml@${{matrix.ref}}
