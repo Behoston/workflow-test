@@ -11,4 +11,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Invoke reindex on demo ${{matrix.ref}}"
-        uses: ./.github/workflows/some_action.yml@${{matrix.ref}}
+        uses: "./.github/workflows/some_action.yml@${{matrix.ref}}"
