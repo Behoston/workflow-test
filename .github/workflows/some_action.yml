@@ -1,0 +1,14 @@
+name: some action
+on:
+  workflow_dispatch:
+jobs:
+  starter:
+    steps:
+      - name: Map branch to DEMO environment
+        uses: iamtheyammer/branch-env-vars@master
+        with:
+          VAR: |
+            a:1
+            b:2
+      - name: Echo
+        run: echo "${{env.VAR}}"

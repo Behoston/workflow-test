@@ -1,0 +1,16 @@
+name: starter
+on:
+  schedule:
+    - cron: '* * * * *'
+jobs:
+  run_reindex_on_demo:
+    strategy:
+      matrix:
+        ref: [ a, b ]
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Invoke reindex on demo ${{matrix.ref}}"
+        uses: benc-uk/workflow-dispatch@v1
+        with:
+          workflow: some action
+          ref: ${{matrix.ref}}
