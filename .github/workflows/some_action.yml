@@ -3,6 +3,7 @@ on:
   workflow_dispatch:
 jobs:
   starter:
+    runs-on: ubuntu-latest
     steps:
       - name: Map branch to DEMO environment
         uses: iamtheyammer/branch-env-vars@master
