@@ -1,7 +1,8 @@
 name: starter
 on:
+  workflow_dispatch:
   schedule:
-    - cron: '* * * * *'
+    - cron: '*/5 * * * *'
 jobs:
   starter:
     strategy:
